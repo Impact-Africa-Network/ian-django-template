@@ -2,7 +2,7 @@
 
 1. Create and activate virtual environment
 2. Install django
-3. Start project using this template
+3. Start project using this template, ensuring to replace `ian_test_proj` with the appropriate project name on the command below:
 
     ```bash
     django-admin startproject --template https://github.com/Impact-Africa-Network/ian-django-template/archive/main.zip ian_test_proj .
