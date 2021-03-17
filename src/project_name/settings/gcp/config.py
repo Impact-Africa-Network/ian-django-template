@@ -1,0 +1,12 @@
+from decouple import config
+
+DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
+
+GS_BUCKET_NAME = config("GS_BUCKET_NAME")
+GS_PROJECT_ID = config("GS_PROJECT_ID")
+GS_CREDENTIALS = config("GS_CREDENTIALS")
+GS_AUTO_CREATE_BUCKET = config("GS_AUTO_CREATE_BUCKET", True, cast=bool)
+GS_AUTO_CREATE_ACL = config("GS_AUTO_CREATE_ACL")
+GS_FILE_CHARSET = config("GS_FILE_CHARSET")
+GS_FILE_OVERWRITE = config("GS_FILE_OVERWRITE")
+GS_MAX_MEMORY_SIZE = config("GS_MAX_MEMORY_SIZE")
