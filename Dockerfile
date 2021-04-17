@@ -8,11 +8,11 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # Install dependencies:
 RUN pip install pipenv
-COPY Pipfile* /tmp
+COPY Pipfile* /tmp/
 RUN cd /tmp && pipenv lock --keep-outdated --requirements > requirements.txt
 RUN pip install -r /tmp/requirements.txt
-COPY . /tmp/code
-RUN pip install /tmp/code
+COPY . /tmp/code/
+
 
 EXPOSE 8000
 
