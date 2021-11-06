@@ -5,9 +5,6 @@ DEBUG = config("DEBUG", False, cast=bool)
 
 ENVIRONMENT = config("ENVIRONMENT", "AWS")
 
-
-ENVIRONMENT = config("ENVIRONMENT", "DGO")
-
 if ENVIRONMENT == "DGO":
     from .dgo import *
 if ENVIRONMENT == "AWS":
