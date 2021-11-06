@@ -17,4 +17,4 @@ if DEBUG:
 else:
     from .prod import *
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
