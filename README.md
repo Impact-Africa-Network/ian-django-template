@@ -29,4 +29,20 @@
 
 6. Populate the `.env` with real values.
 
-7. Setup your database, and run migrations.
+7. Setup your database
+
+        sudo -u postgres psql
+
+        > create database ian_merch;
+
+        > create role ian with password 'ian';
+
+        > alter role ian with login;
+
+        > grant all on database ian_merch to ian;
+        
+8. Make migrations
+
+        ./manage.py makemigrations
+
+        ./manage.py migrate
