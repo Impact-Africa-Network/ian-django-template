@@ -14,6 +14,20 @@ import os
 from pathlib import Path
 from decouple import config
 
+from sentry_sdk.integrations.celery import CeleryIntegration
+from sentry_sdk.integrations.django import DjangoIntegration
+from sentry_sdk.integrations.logging import LoggingIntegration
+
+
+DSN = config("SENTRY_DSN")
+sentry_sdk.init(
+    dsn=DSN,
+    integrations=[
+        DjangoIntegration(),
+        CeleryIntegration(),
+        LoggingIntegration(event_level=logging.WARNING),
+    ],
+)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
