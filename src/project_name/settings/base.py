@@ -11,13 +11,15 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import os 
+import logging
 from pathlib import Path
 from decouple import config
+
 
 from sentry_sdk.integrations.celery import CeleryIntegration
 from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.logging import LoggingIntegration
-
+import sentry_sdk
 
 DSN = config("SENTRY_DSN")
 sentry_sdk.init(
