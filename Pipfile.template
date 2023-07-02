@@ -12,6 +12,7 @@ google-cloud-core = "*"
 sentry-sdk = "*"
 requests = "*"
 psycopg2-binary = "*"
+celery = {extras = ["redis"], version = "*"}
 django-filter = "*"
 pillow = "*"
 simplejson = "*"
@@ -21,6 +22,7 @@ channels = "*"
 gunicorn = "*"
 cryptography = "*"
 django-storages = "*"
+
 
 [dev-packages]
 pyyaml = "*"
