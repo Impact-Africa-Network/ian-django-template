@@ -58,10 +58,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
-    'rest_framework'
+    'rest_framework',
+    '{{project_name}}.apps.ian_account',
+    '{{project_name}}.apps.ian_constants',
+    '{{project_name}}.apps.ian_utilities',
+    '{{project_name}}.apps.ian_auth',
 ]
 
-# AUTH_USER_MODEL = "ian_account.User"
+# Overriding the default user model
+AUTH_USER_MODEL = "{{project_nane}}.apps.ian_account.User"
 
 
 MIDDLEWARE = [
