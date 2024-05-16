@@ -20,11 +20,11 @@
     ```
 4. Rename all the `.template` files by removing the `.template` extensions
 
-5. Copy the contents of `example.env` to `.env`
+5. Copy the contents of `env.template` to `.env`
 
     ```bash
     
-       cp example.env .env
+       cp env.template .env
      ```
 
 6. Populate the `.env` with real values.
